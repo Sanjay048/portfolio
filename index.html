@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @font-face {
+        font-family: poppins;
+        src: url(Poppins-Regular.ttf);
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    .navbar{
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, .8); 
+        position: sticky;
+        top: 0;
+    }
+    .navbar ul{
+        display: flex;
+        list-style: none;
+        margin: 20px;
+    }
+    .navbar ul li{
+        font-family: poppins;
+        font-size: 1.1rem;
+        font-weight:600;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color: white;
+        padding: 8px 50px;
+        transition: all 1.5 ease;
+    }
+    .navbar ul li a:hover{
+        text-shadow: 1px 1px 10px white;
+        /* box-shadow: 0 0 10px white; */
+    }
+
+    #home{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0,0,0,0.4);
+        height: 600px;
+        justify-content: center;
+        color: white;
+    }
+    #home::before{
+        content: "";
+        top: 0;
+        right: 0; 
+        position: absolute;
+        background: url(img.png) no-repeat center center/cover;
+        background-color: black;
+        height: 700px;
+        width: 100%;
+        z-index: -1;
+        opacity: .9;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .heading{
+        font-family: poppins;
+        font-size: 3rem;
+        text-align: center;
+        margin: 40px 10px;
+    }
+    .btn{
+        padding: 10px 35px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        outline: none;
+        font-family: poppins;
+        transition: .6 ease;
+    }
+    .btn:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        box-shadow: 0 0 5px white , 0 0 10px white;
+        font-weight: bold;
+    }
+
+    #about{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+    #pic{
+        display: flex;
+    }
+    #pic img{
+        width: 575px;
+        height: 400px;
+    }
+    #intro{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding:  10px;
+    }
+    #intro h2{
+        margin-left: 80px;
+        font-size: 2rem;
+        margin-bottom: 30px ;
+        font-family: poppins;
+        letter-spacing: .8rem;
+    }
+    #intro p{
+        margin-left: 80px;
+        word-spacing: .8rem;
+        font-family: poppins;
+        font-size: 1.5rem;
+    }
+
+    #Potfolio{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        background-color:rgba(0, 0, 0, .8);
+    }
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
+    .gallery img{
+        width: 360px;
+        height: 240px;
+        margin: 15px;
+    }
+
+    #Contact{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, .8);
+        color: white;
+        padding: 20px;
+        font-family: poppins;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        align-items: center;
+        margin: 20px 0px;
+    }
+    .input{
+        padding: 12px;
+        margin: 15px;
+        width: 30%;
+        border: none;
+        outline: none;
+    }
+    #msg{
+        width: 20%;
+        padding: 10px;
+        margin: 15px;
+        border: none;
+        outline: none;
+    }
+
+    @media (max-width:900px) {
+        .navbar ul{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .heading{
+            font-size: 2.5rem;
+        }
+        #pic{
+            flex-direction: column;
+            align-items: center;
+        }
+        #pic img{
+            width: 575px;
+            height: 700px;
+        }
+        #intro h2{
+            text-align: center;
+            padding: 10px;
+        }
+        .input{
+            width: 60%;
+        }
+        #msg{
+            width: 60%;
+        }
+    }
+</style>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#Potfolio">Potfolio</a></li>
+            <li><a href="#Contact">Contact Me</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="main">
+            <h1 class="heading">I AM <br> SANJAY</h1>
+            <button class="btn">Hire Me</button>
+        </div>
+    </section>
+    <section id="about">
+        <h1 class="heading">ABOUT ME</h1>
+        <div id="pic">
+            <img src="WhatsApp Image 2024-04-12 at 5.25.50 PM.jpeg" alt="">
+            <div id="intro">
+                <h2>SANJAY</h2>
+                <p>To work in challenging environment which enables me to 
+                    increase my ability and skills that in-turn helps me to built a result oriented carrier in the organization A dedicated, a quick learner and adaptable. Looking forward to implement my knowledge and enhance it.</p>
+            </div>
+        </div>
+    </section>
+    <section id="Potfolio">
+        <h1 class="heading">POTFOLIO</h1>
+        <div class="gallery">
+			<img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt="">
+        </div>
+    </section>    
+    <section id="Contact">
+        <h1 class="heading">CONTACT</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Enter Your Name">
+            <input type="email" name="email" class="input" placeholder="Enter Your Email">
+            <textarea name="msg" id="msg" cols="30" rows="10"placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="SEND" class="btn">
+        </form>
+    </section>
+</body>
+</html>
